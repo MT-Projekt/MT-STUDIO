@@ -47,6 +47,20 @@
   color: var(--fg);
 }
 
+.privacyLink {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.privacyLink:hover {
+  color: var(--fg);
+}
+
 .center {
   display: flex;
   color: var(--muted);

@@ -5,9 +5,10 @@ import SocialIcons from "@/components/SocialIcons/SocialIcons";
 interface Props {
   lang: string;
   tagline: string;
+  privacyLabel: string;
 }
 
-export default function Footer({ lang, tagline }: Props) {
+export default function Footer({ lang, tagline, privacyLabel }: Props) {
   const year = new Date().getFullYear();
   const base = lang === "en" ? "/en" : "";
   return (
@@ -17,6 +18,9 @@ export default function Footer({ lang, tagline }: Props) {
           <img src="/mtp-logo.png" alt="MT Projekt" className={styles.logo} />
           <p className={styles.tagline}>{tagline}</p>
           <SocialIcons />
+          <Link href={`${base}/polityka-prywatnosci`} className={styles.privacyLink}>
+            {privacyLabel}
+          </Link>
         </div>
         <div className={styles.center}>
           <p>© {year} MT-PROJEKT Sp. z o.o. Wszelkie prawa zastrzeżone.</p>

@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Link from 'next/link'
 import styles from './ContactForm.module.css'
 
 type Status = 'idle' | 'sending' | 'sent' | 'error'
@@ -15,11 +16,17 @@ interface ContactDict {
   sending: string
   success_title: string
   success_sub: string
+  consent: string
+  consent_link: string
+  consent_error: string
 }
 
-export default function ContactForm({ dict }: { dict: ContactDict }) {
+export default function ContactForm({ dict, lang = 'pl' }: { dict: ContactDict; lang?: string }) {
   const [status, setStatus] = useState<Status>('idle')
   const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [consent, setConsent] = useState(false)
+  const [consentError, setConsentError] = useState(false)
+  const base = lang === 'en' ? '/en' : ''
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
@@ -27,6 +34,10 @@ export default function ContactForm({ dict }: { dict: ContactDict }) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    if (!consent) {
+      setConsentError(true)
+      return
+    }
     setStatus('sending')
     // TODO: podpiąć pod Strapi / własny endpoint
     await new Promise(r => setTimeout(r, 1000))
@@ -87,6 +98,26 @@ export default function ContactForm({ dict }: { dict: ContactDict }) {
           placeholder={dict.message_placeholder}
         />
       </div>
+      <div className={styles.consentRow}>
+        <input
+          className={styles.checkbox}
+          id="consent"
+          name="consent"
+          type="checkbox"
+          checked={consent}
+          onChange={e => {
+            setConsent(e.target.checked)
+            if (e.target.checked) setConsentError(false)
+          }}
+        />
+        <label className={styles.consentLabel} htmlFor="consent">
+          {dict.consent}{' '}
+          <Link href={`${base}/polityka-prywatnosci`} className={styles.consentLink} target="_blank" rel="noopener noreferrer">
+            {dict.consent_link}
+          </Link>
+        </label>
+      </div>
+      {consentError && <p className={styles.consentErrorText}>{dict.consent_error}</p>}
       <button className={styles.btn} type="submit" disabled={status === 'sending'}>
         {status === 'sending' ? dict.sending : dict.submit}
         {status !== 'sending' && (

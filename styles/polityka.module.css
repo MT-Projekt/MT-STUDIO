@@ -1,0 +1,106 @@
+/* ===== POLITYKA PRYWATNOSCI ===== */
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 140px 2rem 5rem;
+}
+
+.breadcrumbs {
+  font-size: 0.85rem;
+  color: #6b6b6b;
+  margin-bottom: 1.5rem;
+}
+.breadcrumbs a {
+  color: #6b6b6b;
+  text-decoration: none;
+}
+.breadcrumbs a:hover {
+  color: var(--accent);
+}
+.breadcrumbCurrent {
+  color: var(--fg);
+}
+
+.header {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--surface-mid);
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--fg);
+  margin-bottom: 1.25rem;
+}
+
+.intro {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--muted);
+  max-width: 65ch;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+  margin-bottom: 0.25rem;
+}
+
+.sectionNum {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.paragraph {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  max-width: 70ch;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 110px 1.25rem 4rem;
+  }
+  .content {
+    gap: 2.25rem;
+  }
+  .sectionTitle {
+    font-size: 1.05rem;
+  }
+}

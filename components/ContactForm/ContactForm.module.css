@@ -76,6 +76,40 @@
   cursor: not-allowed;
 }
 
+.consentRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: var(--accent-light);
+  cursor: pointer;
+}
+
+.consentLabel {
+  font-size: 12px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.55);
+  cursor: pointer;
+}
+
+.consentLink {
+  color: var(--accent-light);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.consentErrorText {
+  font-size: 12px;
+  color: #e88;
+  margin-top: -14px;
+}
+
 .success {
   display: flex;
   flex-direction: column;

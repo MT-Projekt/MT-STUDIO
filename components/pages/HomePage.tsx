@@ -237,7 +237,7 @@ export default async function HomePage({ lang, dict }: Props) {
               </div>
             </div>
             <div className={styles.contactFormWrap}>
-              <ContactForm dict={d.contact} />
+              <ContactForm dict={d.contact} lang={lang} />
             </div>
           </div>
         </div>

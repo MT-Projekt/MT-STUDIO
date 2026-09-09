@@ -135,10 +135,25 @@
     "submit": "Wyślij wiadomość",
     "sending": "Wysyłanie…",
     "success_title": "Dziękujemy za wiadomość.",
-    "success_sub": "Odezwiemy się wkrótce."
+    "success_sub": "Odezwiemy się wkrótce.",
+    "consent": "Wyrażam zgodę na przetwarzanie moich danych osobowych przez MT-Projekt Sp. z o.o. w celu udzielenia odpowiedzi na moje zapytanie.",
+    "consent_link": "Polityka prywatności",
+    "consent_error": "Zaznacz zgodę na przetwarzanie danych, aby wysłać wiadomość."
   },
   "footer": {
-    "tagline": "Kompleksowe projekty inżynierskie"
+    "tagline": "Kompleksowe projekty inżynierskie",
+    "privacy": "Polityka prywatności"
+  },
+  "cookies": {
+    "text": "Ta strona nie korzysta z plików cookie do analityki, marketingu ani śledzenia użytkowników. W pamięci przeglądarki zapisujemy wyłącznie informację o zamknięciu tego komunikatu.",
+    "accept": "Rozumiem",
+    "more": "Polityka prywatności"
+  },
+  "privacy_page": {
+    "home": "Strona główna",
+    "eyebrow": "Dane osobowe",
+    "title": "Polityka prywatności",
+    "intro": "Poniżej wyjaśniamy, jakie dane osobowe zbieramy za pośrednictwem tej strony, w jakim celu je przetwarzamy oraz jakie prawa Ci przysługują."
   },
   "project_page": {
     "home": "Strona główna",
