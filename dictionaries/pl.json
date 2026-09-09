@@ -211,7 +211,9 @@
     "join_cta": "Prześlij aplikację",
     "spontaneous_title": "Wyślij nam swoje CV",
     "spontaneous_text": "Jeśli chcesz dołączyć do MT-Projekt, zostaw nam kilka informacji o sobie. Chętnie wrócimy do Twojej aplikacji, gdy pojawi się odpowiedni moment.",
-    "spontaneous_cta": "Wyślij swoje CV"
+    "spontaneous_cta": "Wyślij swoje CV",
+    "rodo_note": "Dane z aplikacji przetwarzamy wyłącznie w celu rekrutacji. Szczegóły w",
+    "rodo_note_link": "polityce prywatności"
   },
   "oferta_page": {
     "home": "Strona główna",
@@ -221,7 +223,9 @@
     "location": "Lokalizacja",
     "employment_type": "Wymiar pracy",
     "apply_cta": "Aplikuj na to stanowisko",
-    "no_offers": "Obecnie nie prowadzimy rekrutacji na konkretne stanowiska. Sprawdź ponownie wkrótce lub wyślij nam aplikację spontaniczną."
+    "no_offers": "Obecnie nie prowadzimy rekrutacji na konkretne stanowiska. Sprawdź ponownie wkrótce lub wyślij nam aplikację spontaniczną.",
+    "rodo_note": "Dane z aplikacji przetwarzamy wyłącznie w celu rekrutacji. Szczegóły w",
+    "rodo_note_link": "polityce prywatności"
   },
   "wspolpraca_page": {
     "hero_eyebrow": "Międzynarodowa współpraca",

@@ -211,7 +211,9 @@
     "join_cta": "Send application",
     "spontaneous_title": "Send us your CV",
     "spontaneous_text": "If you'd like to join MT-Projekt, leave us a few details about yourself. We'll gladly come back to your application when the right moment comes.",
-    "spontaneous_cta": "Send your CV"
+    "spontaneous_cta": "Send your CV",
+    "rodo_note": "Application data is processed solely for recruitment purposes. See our",
+    "rodo_note_link": "privacy policy"
   },
   "oferta_page": {
     "home": "Home",
@@ -221,7 +223,9 @@
     "location": "Location",
     "employment_type": "Employment type",
     "apply_cta": "Apply for this position",
-    "no_offers": "We are not currently recruiting for specific roles. Check back soon or send us a speculative application."
+    "no_offers": "We are not currently recruiting for specific roles. Check back soon or send us a speculative application.",
+    "rodo_note": "Application data is processed solely for recruitment purposes. See our",
+    "rodo_note_link": "privacy policy"
   },
   "wspolpraca_page": {
     "hero_eyebrow": "International Cooperation",

@@ -378,6 +378,28 @@
 }
 
 /* ===== RESPONSIVE ===== */
+/* ===== KLAUZULA RODO PRZY APLIKACJI ===== */
+.spontaneousRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.rodoNote {
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: #5f5f5b;
+  max-width: 34ch;
+  text-align: left;
+}
+
+.rodoNoteLink {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 @media (max-width: 1024px) {
   .whyGrid {
     grid-template-columns: repeat(3, 1fr);
@@ -476,6 +498,14 @@
   .spontaneousCta {
     width: 100%;
     justify-content: center;
+  }
+  .spontaneousRight {
+    width: 100%;
+    align-items: stretch;
+  }
+  .rodoNote {
+    text-align: left;
+    max-width: none;
   }
 }
 

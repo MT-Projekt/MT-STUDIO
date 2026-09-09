@@ -85,6 +85,14 @@ export default async function OfertaPage({ lang, dict, slug }: Props) {
           />
         </svg>
       </a>
+
+      <p className={styles.rodoNote}>
+        {d.rodo_note}{" "}
+        <Link href={`${base}/polityka-prywatnosci`} className={styles.rodoNoteLink}>
+          {d.rodo_note_link}
+        </Link>
+        .
+      </p>
     </div>
   );
 }

@@ -202,3 +202,18 @@
     flex-direction: column;
   }
 }
+
+/* ===== KLAUZULA RODO PRZY APLIKACJI ===== */
+.rodoNote {
+  margin-top: 0.75rem;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: #5f5f5b;
+  max-width: 40ch;
+}
+
+.rodoNoteLink {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

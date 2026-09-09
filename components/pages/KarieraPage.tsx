@@ -229,18 +229,27 @@ export default async function KarieraPage({ lang, dict }: Props) {
             <p className={styles.spontaneousText}>{d.spontaneous_text}</p>
           </div>
         </div>
-        <a href={mailHref} className={styles.spontaneousCta}>
-          {d.spontaneous_cta}
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M5 12H19M19 12L13 6M19 12L13 18"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </a>
+        <div className={styles.spontaneousRight}>
+          <a href={mailHref} className={styles.spontaneousCta}>
+            {d.spontaneous_cta}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M5 12H19M19 12L13 6M19 12L13 18"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </a>
+          <p className={styles.rodoNote}>
+            {d.rodo_note}{" "}
+            <Link href={`${base}/polityka-prywatnosci`} className={styles.rodoNoteLink}>
+              {d.rodo_note_link}
+            </Link>
+            .
+          </p>
+        </div>
       </section>
     </>
   );
