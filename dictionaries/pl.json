@@ -27,6 +27,10 @@
       "oferty": {
         "title": "Oferty pracy",
         "description": "Aktualne oferty pracy w MT-Projekt – biurze projektowym infrastruktury drogowej w Grójcu. Sprawdź otwarte stanowiska i aplikuj."
+      },
+      "polityka": {
+        "title": "Polityka prywatności",
+        "description": "Jak MT-Projekt Sp. z o.o. przetwarza dane osobowe przekazane przez stronę: cele i podstawy przetwarzania, okres przechowywania oraz Twoje prawa."
       }
     }
   },

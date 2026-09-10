@@ -34,6 +34,7 @@ const STATIC_PAGES = {
   wspolpraca: '/wspolpraca',
   kariera: '/kariera',
   oferty: '/kariera/oferty',
+  polityka: '/polityka-prywatnosci',
 } as const
 
 export type StaticPage = keyof typeof STATIC_PAGES

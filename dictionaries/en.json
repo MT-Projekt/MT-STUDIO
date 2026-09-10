@@ -27,6 +27,10 @@
       "oferty": {
         "title": "Job openings",
         "description": "Current job openings at MT-Projekt, a road infrastructure design office in Grójec, Poland. See open positions and apply."
+      },
+      "polityka": {
+        "title": "Privacy policy",
+        "description": "How MT-Projekt Sp. z o.o. processes personal data submitted through this website: purposes and legal basis, retention period and your rights."
       }
     }
   },
