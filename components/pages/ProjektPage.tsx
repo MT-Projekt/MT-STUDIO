@@ -3,7 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getProjectBySlug, getAllProjects } from '@/lib/sanity'
 import { Dictionary } from '@/lib/dictionaries'
+import { breadcrumbJsonLd } from '@/lib/seo'
 import GalleryLightbox from '@/components/GalleryLightbox/GalleryLightbox'
+import JsonLd from '@/components/JsonLd'
 import styles from '@/styles/projekt.module.css'
 
 interface Props {
@@ -60,11 +62,18 @@ export default async function ProjektPage({ lang, dict, slug }: Props) {
 
   return (
     <article className={styles.page}>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: d.home, path: base || '/' },
+          { name: d.back, path: `${base}/projekty` },
+          { name: project.title, path: `${base}/projekty/${project.slug}` },
+        ])}
+      />
       {/* HERO */}
       <section className={styles.hero}>
         <Image
           src={project.coverImage}
-          alt={project.title}
+          alt={project.coverImageAlt || project.title}
           fill
           priority
           quality={90}

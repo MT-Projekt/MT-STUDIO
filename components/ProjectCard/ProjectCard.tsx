@@ -19,7 +19,7 @@ export default function ProjectCard({ project, size = 'medium', lang = 'pl', gra
       <div className={styles.imageWrap}>
         <Image
           src={project.coverImage}
-          alt={project.title}
+          alt={project.coverImageAlt || project.title}
           fill
           quality={90}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

@@ -30,6 +30,12 @@
       }
     }
   },
+  "not_found": {
+    "title": "Page not found",
+    "text": "The page you are looking for doesn't exist or has been moved. Check the address or go to the homepage.",
+    "cta_home": "Homepage",
+    "cta_projects": "View projects"
+  },
   "nav": {
     "strona_glowna": "Home",
     "o_nas": "About us",

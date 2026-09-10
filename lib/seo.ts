@@ -2,10 +2,25 @@ import 'server-only'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getDictionary, type Locale } from './dictionaries'
+import { studioInfo } from './mockData'
 import { getJobPostingBySlug, getProjectBySlug } from './sanity'
+import type { JobPosting } from './types'
 
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mt-p.pl').replace(/\/$/, '')
 export const SITE_NAME = 'MT-Projekt'
+
+const LOGO_URL = `${SITE_URL}/mtp-logo.png`
+const ORGANIZATION_ID = `${SITE_URL}/#organization`
+
+// Structured form of studioInfo.address
+const ADDRESS = {
+  '@type': 'PostalAddress',
+  streetAddress: 'ul. Piłsudskiego 42A',
+  postalCode: '05-600',
+  addressLocality: 'Grójec',
+  addressRegion: 'mazowieckie',
+  addressCountry: 'PL',
+}
 
 type OgImage = { url: string; width?: number; height?: number; alt?: string }
 
@@ -92,14 +107,16 @@ export async function projectMetadata(lang: Locale, slug: string): Promise<Metad
 
   const facts = [project.location, project.year].filter(Boolean).join(', ')
   const description = truncate(
-    project.description || `${project.title}${facts ? ` (${facts})` : ''}. ${meta.project_description_suffix}`
+    project.seoDescription ||
+      project.description ||
+      `${project.title}${facts ? ` (${facts})` : ''}. ${meta.project_description_suffix}`
   )
   return pageMetadata({
     lang,
     path: `/projekty/${slug}`,
-    title: project.title,
+    title: project.seoTitle || project.title,
     description,
-    image: sanityOgImage(project.coverImage, project.title),
+    image: sanityOgImage(project.coverImage, project.coverImageAlt || project.title),
   })
 }
 
@@ -111,11 +128,94 @@ export async function jobMetadata(lang: Locale, slug: string): Promise<Metadata>
   return pageMetadata({ lang, path: `/kariera/oferty/${slug}`, title, description: truncate(job.summary) })
 }
 
+// ---- JSON-LD (structured data) ----
+
+export async function siteJsonLd(lang: Locale) {
+  const { meta, competences: c } = await getDictionary(lang)
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'ProfessionalService',
+        '@id': ORGANIZATION_ID,
+        name: SITE_NAME,
+        legalName: 'MT-Projekt Sp. z o.o.',
+        url: SITE_URL,
+        logo: LOGO_URL,
+        image: `${SITE_URL}${DEFAULT_OG_IMAGE.url}`,
+        description: meta.pages.home.description,
+        email: studioInfo.email,
+        telephone: studioInfo.phone,
+        address: ADDRESS,
+        areaServed: { '@type': 'Country', name: 'Poland' },
+        knowsAbout: [c.item1_title, c.item2_title, c.item3_title, c.item4_title, 'CAD/BIM'],
+        sameAs: ['https://www.linkedin.com/company/mt-projekt-sp-z-o-o/'],
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: SITE_NAME,
+        inLanguage: lang,
+        publisher: { '@id': ORGANIZATION_ID },
+      },
+    ],
+  }
+}
+
+// Paths already include the language prefix, e.g. '/en/projekty'
+export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: squash(item.name),
+      item: `${SITE_URL}${item.path}`,
+    })),
+  }
+}
+
+// https://developers.google.com/search/docs/appearance/structured-data/job-posting
+export function jobPostingJsonLd(job: JobPosting, lang: Locale) {
+  const atHeadquarters = job.location?.trim().toLowerCase() === ADDRESS.addressLocality.toLowerCase()
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'JobPosting',
+    title: squash(job.title),
+    description: toHtml(job.description || job.summary),
+    datePosted: job.datePosted,
+    // GROQ returns null for empty fields; undefined drops the key instead of sending an invalid value
+    validThrough: job.validThrough ?? undefined,
+    employmentType: job.employmentTypeCode ?? undefined,
+    url: `${SITE_URL}${localePath(lang, `/kariera/oferty/${job.slug}`)}`,
+    identifier: { '@type': 'PropertyValue', name: SITE_NAME, value: job.id },
+    directApply: false,
+    hiringOrganization: { '@type': 'Organization', name: SITE_NAME, sameAs: SITE_URL, logo: LOGO_URL },
+    jobLocation: {
+      '@type': 'Place',
+      address: atHeadquarters
+        ? ADDRESS
+        : { '@type': 'PostalAddress', addressLocality: job.location, addressCountry: 'PL' },
+    },
+  }
+}
+
 // Sanity CDN crops to the 1200×630 size expected by Facebook/LinkedIn/X
 function sanityOgImage(src: string | undefined, alt: string): OgImage | undefined {
   if (!src) return undefined
   if (!src.includes('cdn.sanity.io')) return { url: src, alt }
   return { url: `${src.split('?')[0]}?w=1200&h=630&fit=crop&fm=jpg&q=80`, width: 1200, height: 630, alt }
+}
+
+// Google expects JobPosting.description as HTML; CMS gives plain text with blank-line paragraphs
+function toHtml(text: string) {
+  const escaped = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  return escaped
+    .split(/\n\s*\n/)
+    .map(p => `<p>${p.trim().replace(/\n/g, '<br>')}</p>`)
+    .join('')
 }
 
 // CMS content often contains double spaces and stray line breaks

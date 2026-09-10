@@ -30,6 +30,12 @@
       }
     }
   },
+  "not_found": {
+    "title": "Nie znaleziono strony",
+    "text": "Strona, której szukasz, nie istnieje lub została przeniesiona. Sprawdź adres albo przejdź do strony głównej.",
+    "cta_home": "Strona główna",
+    "cta_projects": "Zobacz projekty"
+  },
   "nav": {
     "strona_glowna": "Strona główna",
     "o_nas": "O nas",

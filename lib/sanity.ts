@@ -30,8 +30,11 @@ const projectFields = (lang: string) => {
     featured,
     "coverImage": coverImage.asset->url + "?w=2400&q=90",
     "coverImageLqip": coverImage.asset->metadata.lqip,
-    "images": images[]{ "url": asset->url, "lqip": asset->metadata.lqip },
+    "coverImageAlt": coalesce(coverImage.alt_${l}, coverImage.alt_pl),
+    "images": images[]{ "url": asset->url, "lqip": asset->metadata.lqip, "alt": coalesce(alt_${l}, alt_pl) },
     "description": coalesce(description_${l}, description_pl),
+    "seoTitle": seoTitle_${l},
+    "seoDescription": seoDescription_${l},
     "pointCloudImage": pointCloudImage.asset->url,
     "pointCloudImageLqip": pointCloudImage.asset->metadata.lqip,
     "terrainModelImage": terrainModelImage.asset->url,
@@ -64,7 +67,10 @@ const jobFields = (lang: string) => {
     "employmentType": coalesce(employment_type_${l}, employment_type_pl),
     "summary": coalesce(summary_${l}, summary_pl),
     "description": coalesce(description_${l}, description_pl),
-    externalUrl
+    externalUrl,
+    employmentTypeCode,
+    "datePosted": coalesce(publishedAt, _createdAt),
+    validThrough
   `
 }
 
@@ -114,22 +120,25 @@ export async function getTeam(lang = 'pl'): Promise<TeamMember[]> {
   return results.length > 0 || !useMocks ? results : mockTeam as TeamMember[]
 }
 
+// Expired postings disappear on their own — Google penalises JobPosting markup on stale offers
+const LIVE_JOB = `_type == "jobPosting" && active == true && (!defined(validThrough) || validThrough > now())`
+
 export async function getJobPostings(lang = 'pl'): Promise<JobPosting[]> {
   return client.fetch<JobPosting[]>(
-    `*[_type == "jobPosting" && active == true] | order(order asc, publishedAt desc) { ${jobFields(lang)} }`
+    `*[${LIVE_JOB}] | order(order asc, publishedAt desc) { ${jobFields(lang)} }`
   )
 }
 
 export async function getJobPostingBySlug(slug: string, lang = 'pl'): Promise<JobPosting | null> {
   return client.fetch<JobPosting | null>(
-    `*[_type == "jobPosting" && active == true && slug.current == $slug][0] { ${jobFields(lang)} }`,
+    `*[${LIVE_JOB} && slug.current == $slug][0] { ${jobFields(lang)} }`,
     { slug }
   )
 }
 
 export async function getAllJobSlugs(): Promise<string[]> {
   const results = await client.fetch<{ slug: string }[]>(
-    `*[_type == "jobPosting" && active == true] { "slug": slug.current }`
+    `*[${LIVE_JOB}] { "slug": slug.current }`
   )
   return results.map(r => r.slug)
 }
@@ -139,6 +148,6 @@ type SitemapDoc = { slug: string; updatedAt: string }
 export async function getSitemapDocs(): Promise<{ projects: SitemapDoc[]; jobs: SitemapDoc[] }> {
   return client.fetch(`{
     "projects": *[_type == "project" && defined(slug.current)] { "slug": slug.current, "updatedAt": _updatedAt },
-    "jobs": *[_type == "jobPosting" && active == true && defined(slug.current)] { "slug": slug.current, "updatedAt": _updatedAt }
+    "jobs": *[${LIVE_JOB} && defined(slug.current)] { "slug": slug.current, "updatedAt": _updatedAt }
   }`)
 }

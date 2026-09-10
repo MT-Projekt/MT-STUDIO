@@ -3,7 +3,9 @@ import Link from "next/link";
 import { getJobPostingBySlug } from "@/lib/sanity";
 import { studioInfo } from "@/lib/mockData";
 import { Dictionary } from "@/lib/dictionaries";
+import { breadcrumbJsonLd, jobPostingJsonLd } from "@/lib/seo";
 import JobCategoryIcon from "@/components/JobCategoryIcon/JobCategoryIcon";
+import JsonLd from "@/components/JsonLd";
 import styles from "@/styles/oferty.module.css";
 
 interface Props {
@@ -25,6 +27,15 @@ export default async function OfertaPage({ lang, dict, slug }: Props) {
 
   return (
     <div className={styles.detailPage}>
+      <JsonLd data={jobPostingJsonLd(job, isEn ? "en" : "pl")} />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: d.home, path: base || "/" },
+          { name: d.back, path: `${base}/kariera` },
+          { name: d.back_offers, path: `${base}/kariera/oferty` },
+          { name: job.title, path: `${base}/kariera/oferty/${job.slug}` },
+        ])}
+      />
       <div className={styles.breadcrumbs}>
         <Link href={base || "/"}>{d.home}</Link>
         <span> › </span>

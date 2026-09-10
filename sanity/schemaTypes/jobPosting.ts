@@ -10,6 +10,15 @@ const CATEGORIES = [
   { title: 'Sieci i odwodnienie', value: 'networks' },
 ]
 
+// Values required by Google for Jobs (schema.org employmentType)
+const EMPLOYMENT_TYPES = [
+  { title: 'Pełny etat', value: 'FULL_TIME' },
+  { title: 'Część etatu', value: 'PART_TIME' },
+  { title: 'Kontrakt / B2B', value: 'CONTRACTOR' },
+  { title: 'Umowa na czas określony', value: 'TEMPORARY' },
+  { title: 'Staż / praktyki', value: 'INTERN' },
+]
+
 export const jobPostingSchema = defineType({
   name: 'jobPosting',
   title: 'Oferta pracy',
@@ -43,6 +52,14 @@ export const jobPostingSchema = defineType({
       title: 'Wymiar pracy (EN)',
       type: 'string',
       initialValue: 'Full-time',
+    }),
+    defineField({
+      name: 'employmentTypeCode',
+      title: 'Rodzaj zatrudnienia (dla Google)',
+      type: 'string',
+      options: { list: EMPLOYMENT_TYPES, layout: 'dropdown' },
+      initialValue: 'FULL_TIME',
+      description: 'Oznaczenie dla Google for Jobs. Tekst widoczny na stronie ustawiasz w polach „Wymiar pracy”.',
     }),
     defineField({
       name: 'summary_pl',
@@ -81,6 +98,12 @@ export const jobPostingSchema = defineType({
       title: 'Data publikacji',
       type: 'datetime',
       initialValue: () => new Date().toISOString(),
+    }),
+    defineField({
+      name: 'validThrough',
+      title: 'Ważna do',
+      type: 'datetime',
+      description: 'Po tej dacie oferta sama zniknie ze strony i z Google. Google for Jobs zaleca podanie daty ważności.',
     }),
   ],
   orderings: [

@@ -49,7 +49,7 @@ export default function GalleryLightbox({ images, alt }: Props) {
           >
             <Image
               src={img.url}
-              alt={`${alt} — ${i + 1}`}
+              alt={img.alt || `${alt} — ${i + 1}`}
               fill
               quality={90}
               sizes="(max-width: 768px) 100vw, 25vw"
@@ -81,7 +81,7 @@ export default function GalleryLightbox({ images, alt }: Props) {
           <div className={styles.lightboxImageWrap} onClick={(e) => e.stopPropagation()}>
             <Image
               src={images[openIndex].url}
-              alt={`${alt} — ${openIndex + 1}`}
+              alt={images[openIndex].alt || `${alt} — ${openIndex + 1}`}
               fill
               quality={90}
               sizes="100vw"

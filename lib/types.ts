@@ -7,6 +7,7 @@ export interface SanityImage {
 export interface GalleryImage {
   url: string
   lqip?: string
+  alt?: string
 }
 
 export interface Project {
@@ -17,6 +18,7 @@ export interface Project {
   location: string
   coverImage: string
   coverImageLqip?: string
+  coverImageAlt?: string
   images: GalleryImage[]
   description: string
   area?: string
@@ -27,6 +29,8 @@ export interface Project {
   terrainModelImageLqip?: string
   existingStateImage?: string
   existingStateImageLqip?: string
+  seoTitle?: string
+  seoDescription?: string
 }
 
 export interface TeamMember {
@@ -49,6 +53,8 @@ export interface StudioInfo {
 
 export type JobCategory = 'roads' | 'bridges' | 'bim' | 'surveying' | 'team' | 'supervision' | 'networks'
 
+export type EmploymentTypeCode = 'FULL_TIME' | 'PART_TIME' | 'CONTRACTOR' | 'TEMPORARY' | 'INTERN'
+
 export interface JobPosting {
   id: string
   slug: string
@@ -56,7 +62,10 @@ export interface JobPosting {
   category: JobCategory
   location: string
   employmentType: string
+  employmentTypeCode?: EmploymentTypeCode
   summary: string
   description?: string
   externalUrl?: string
+  datePosted: string
+  validThrough?: string
 }
