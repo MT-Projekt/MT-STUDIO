@@ -1,0 +1,358 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+.heroImageWrap {
+  position: absolute;
+  inset: 0;
+}
+.heroImage {
+  object-fit: cover;
+}
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.45) 45%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+}
+.heroInner {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.eyebrow {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.heroEyebrow {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--accent-light);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.heroTitle {
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  max-width: 22ch;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+}
+.heroSub {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 48ch;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+.timelineSection {
+  border-bottom: 1px solid #e5e5e5;
+}
+.sectionHeader {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+}
+.sectionTitle {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 auto;
+  color: var(--fg);
+}
+
+.competences {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 6rem 2rem;
+}
+.competencesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #e5e5e5;
+  border: 1px solid #e5e5e5;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.competenceCard {
+  background: #fff;
+  padding: 2.5rem;
+  transition: background 0.2s;
+}
+.competenceCard:hover {
+  background: #fafafa;
+}
+.competenceTitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+}
+.competenceText {
+  font-size: 0.85rem;
+  color: #6b6b6b;
+  line-height: 1.6;
+}
+
+.process {
+  background: #fafafa;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 5rem 2rem 4rem;
+}
+
+.processHeader {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+}
+.processTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--fg);
+  margin-bottom: 1rem;
+}
+.processSub {
+  font-size: 1rem;
+  color: #6b6b6b;
+  line-height: 1.6;
+  max-width: 56ch;
+  margin: 0 auto;
+}
+
+.processTimeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  height: 128px;
+}
+.processTimelineStep {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.processTimelineStep::before,
+.processTimelineStep::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  background: var(--accent);
+  transform: translateY(-50%);
+  z-index: 0;
+}
+.processTimelineStep::before {
+  left: 0;
+  right: 50%;
+}
+.processTimelineStep::after {
+  left: 50%;
+  right: 0;
+}
+.processTimelineStep:first-child::before {
+  display: none;
+}
+.processTimelineStep:last-child::after {
+  display: none;
+}
+.processEndDot {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translateY(-50%);
+}
+.processEndDotLeft {
+  left: -14px;
+}
+.processEndDotRight {
+  right: -14px;
+}
+.processDot {
+  position: relative;
+  z-index: 1;
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  background: var(--accent);
+  overflow: hidden;
+  box-shadow: 0 0 0 6px #fafafa;
+}
+.processDotImg {
+  object-fit: contain;
+  background: #fff;
+}
+
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1300px;
+  margin: 2rem auto 0;
+}
+.processCard {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.75rem;
+  border-bottom: 3px solid var(--accent);
+  box-shadow: 0 12px 30px -20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  text-align: center;
+}
+.processNum {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.processStepTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.processFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 620px;
+  margin: 3rem auto 0;
+  text-align: left;
+}
+.processFooter p {
+  font-size: 0.95rem;
+  color: var(--fg);
+  line-height: 1.5;
+}
+.processFooterIcon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta {
+  border-top: 1px solid #e5e5e5;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+.ctaTitle {
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  max-width: 26ch;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--fg);
+}
+.ctaSub {
+  font-size: 1rem;
+  color: #6b6b6b;
+  max-width: 48ch;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.9rem 1.5rem;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.ctaBtn:hover {
+  background: var(--accent-light);
+}
+
+@media (max-width: 1024px) {
+  .competencesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .processGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .processTimeline {
+    gap: 0.5rem;
+    height: 96px;
+  }
+  .processDot {
+    width: 78px;
+    height: 78px;
+  }
+}
+@media (max-width: 640px) {
+  .competencesGrid {
+    grid-template-columns: 1fr;
+  }
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+  .processTimeline {
+    gap: 0.25rem;
+    height: 76px;
+  }
+  .processDot {
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 0 0 4px #fafafa;
+  }
+  .processEndDotLeft {
+    left: -8px;
+  }
+  .processEndDotRight {
+    right: -8px;
+  }
+  .processFooter {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+}

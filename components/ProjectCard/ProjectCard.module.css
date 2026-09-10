@@ -1,0 +1,73 @@
+.card {
+  display: block;
+  text-decoration: none;
+  color: var(--charcoal);
+  overflow: hidden;
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: #e8e8e8;
+}
+
+.imageOnlyCard {
+  height: 100%;
+}
+
+.imageOnlyCard .imageWrap {
+  aspect-ratio: auto;
+  height: 100%;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.4s ease;
+}
+
+.card:hover .image { transform: scale(1.03); }
+
+.grayscale .image { filter: grayscale(100%); }
+.grayscale:hover .image { filter: grayscale(0%); }
+
+.gradientOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0) 75%);
+  pointer-events: none;
+}
+
+.metaOverlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.5rem 1.75rem;
+  z-index: 2;
+}
+
+.year {
+  display: block;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 0.4rem;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+  color: #fff;
+}
+
+.location {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.75);
+}
+
+/* Legacy size classes — kept for compatibility */
+.large .imageWrap { aspect-ratio: 16/10; }
+.small .imageWrap { aspect-ratio: 3/4; }

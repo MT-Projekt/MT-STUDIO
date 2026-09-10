@@ -1,0 +1,102 @@
+.wrapper {
+  height: 300vh;
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background: #fafafa;
+  padding-bottom: 4rem;
+}
+
+.track {
+  display: flex;
+  gap: 6rem;
+  padding: 0 2rem 3rem;
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+
+.item {
+  flex-shrink: 0;
+  width: 360px;
+}
+
+.year {
+  display: block;
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  color: #0a0a0a;
+}
+
+.itemTitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.itemText {
+  font-size: 0.85rem;
+  color: #6b6b6b;
+  line-height: 1.65;
+  max-width: 30ch;
+}
+
+.progressBar {
+  margin: 0 2rem;
+  height: 1px;
+  background: #e5e5e5;
+  position: relative;
+}
+
+.progress {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  background: #0a0a0a;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* Mobile */
+.mobile { display: none; }
+
+@media (max-width: 1024px) {
+  .wrapper { display: none; }
+  .mobile {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    background: #fafafa;
+    padding: 0 1.5rem 2rem;
+  }
+  .mobileItem {
+    flex: 0 0 82%;
+    scroll-snap-align: start;
+    border-top: none;
+    border-right: 1px solid #e5e5e5;
+    padding: 1.5rem 1.5rem 0 0;
+    margin-right: 1.5rem;
+  }
+  .mobileItem:last-child {
+    border-right: none;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobileItem { flex-basis: 90%; }
+}

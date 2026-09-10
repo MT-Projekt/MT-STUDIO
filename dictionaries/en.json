@@ -1,0 +1,201 @@
+{
+  "nav": {
+    "strona_glowna": "Home",
+    "o_nas": "About us",
+    "projekty": "Projects",
+    "wspolpraca": "Cooperation",
+    "wspolpraca_krajowa": "Domestic cooperation",
+    "wspolpraca_miedzynarodowa": "International Cooperation",
+    "zespol": "Team",
+    "kontakt": "Contact",
+    "kariera": "Careers",
+    "zapytanie": "Request a quote"
+  },
+  "hero": {
+    "label": "Engineering design — road infrastructure",
+    "title": "We build infrastructure that connects people",
+    "sub": "Comprehensive engineering design of roads, bridges and accompanying infrastructure.",
+    "btn": "View projects",
+    "btn2": "Contact us",
+    "scroll": "Scroll"
+  },
+  "about_short": {
+    "eyebrow": "About us",
+    "text": "Road infrastructure engineering with emphasis on technical consistency and construction realities. We support investments at every stage.",
+    "stat1_num": "15+",
+    "stat1_label": "Years of experience",
+    "stat2_num": "200+",
+    "stat2_label": "Completed projects",
+    "stat3_num": "10",
+    "stat3_label": "Areas of specialisation",
+    "cta": "Learn more about us"
+  },
+  "competences": {
+    "eyebrow": "Competences",
+    "title": "Four pillars of our design work.",
+    "item1_title": "Roads & streets",
+    "item1_text": "Roads, intersections, driveways, pavements and cycle paths.",
+    "item2_title": "Engineering structures",
+    "item2_text": "Bridges, culverts and road structures.",
+    "item3_title": "Drainage & networks",
+    "item3_text": "Stormwater drainage, ditches, outlets and retention.",
+    "item4_title": "Traffic management",
+    "item4_text": "Permanent and temporary traffic organisation and signage."
+  },
+  "process": {
+    "eyebrow": "How we work",
+    "title": "A clear process from analysis to construction support.",
+    "step1_num": "01",
+    "step1_title": "Analysis",
+    "step1_text": "We identify the investment scope, site conditions, and formal and technical requirements.",
+    "step2_num": "02",
+    "step2_title": "Design",
+    "step2_text": "We develop solutions consistent with investor requirements and construction realities.",
+    "step3_num": "03",
+    "step3_title": "Coordination",
+    "step3_text": "We coordinate documentation with disciplines, network operators and road administrators.",
+    "step4_num": "04",
+    "step4_title": "Support",
+    "step4_text": "We assist with approvals, changes and the construction phase."
+  },
+  "projects": {
+    "eyebrow": "Portfolio",
+    "section_title": "Projects",
+    "see_all": "View all →"
+  },
+  "team": {
+    "eyebrow": "Team",
+    "title": "Design engineers and specialists responsible for documentation quality."
+  },
+  "cooperation": {
+    "eyebrow": "Cooperation",
+    "title": "International cooperation.",
+    "en_col1_title": "Who we support",
+    "en_col1_items": [
+      "International engineering offices",
+      "Infrastructure contractors",
+      "Investors and developers",
+      "General designers"
+    ],
+    "en_col2_title": "Scope of support",
+    "en_col2_items": [
+      "Road design & traffic layouts",
+      "Bridge engineering & structures",
+      "CAD/BIM documentation",
+      "Technical coordination"
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "We will prepare a scope of support tailored to your investment.",
+    "form_cta": "Enquiry form",
+    "name": "Full name",
+    "name_placeholder": "John Smith",
+    "email": "E-mail",
+    "email_placeholder": "john@example.com",
+    "message": "Message",
+    "message_placeholder": "Briefly describe your project or enquiry…",
+    "submit": "Send message",
+    "sending": "Sending…",
+    "success_title": "Thank you for your message.",
+    "success_sub": "We will get back to you shortly."
+  },
+  "footer": {
+    "tagline": "Comprehensive engineering design"
+  },
+  "project_page": {
+    "home": "Home",
+    "back": "Projects",
+    "badge": "Completed project",
+    "year": "Completion year",
+    "location": "Location",
+    "area": "Length / Span",
+    "tech_eyebrow": "Technology",
+    "tech_title": "Point cloud",
+    "tech_pointcloud": "Point cloud",
+    "tech_terrain": "3D terrain model",
+    "tech_existing": "Existing state analysis",
+    "gallery_title": "Project gallery",
+    "contact_title": "Planning a similar investment?",
+    "contact_text": "Get in touch — we'll prepare solutions tailored to your needs.",
+    "contact_cta": "Request a quote",
+    "next": "Next project"
+  },
+  "projects_page": {
+    "title": "Projects",
+    "count_suffix": "projects"
+  },
+  "o_nas_page": {
+    "hero_eyebrow": "About us",
+    "hero_title": "An engineering office focused on practical solutions and multi-discipline coordination",
+    "hero_sub": "We prepare technically consistent documentation adapted to construction realities.",
+    "timeline_eyebrow": "Experience & growth",
+    "competences_eyebrow": "Design competences",
+    "competences_title": "Full range of discipline documentation.",
+    "process_eyebrow": "How we work",
+    "process_title": "A clear design process.",
+    "process_sub": "We work in an organised way, guiding the project step by step from needs analysis to support during the execution stage.",
+    "process_footer": "Experience, responsibility and quality at every stage of the project.",
+    "cta_title": "Let's talk about your project",
+    "cta_sub": "We will prepare a support scope tailored to the investment, documentation stage and technical requirements.",
+    "cta_btn": "Contact us"
+  },
+  "kariera_page": {
+    "eyebrow": "Careers",
+    "title": "Designing the future ",
+    "title_accent": "- together.",
+    "text": "At MT-Projekt we combine knowledge, experience and modern technology to create infrastructure solutions that make a real difference.",
+    "cta": "See how we work",
+    "why_eyebrow": "What sets us apart?",
+    "why_title": "Why work at MT-Projekt?",
+    "jobs_eyebrow": "Open positions",
+    "jobs_title": "Join our team",
+    "jobs_see_all": "View all openings",
+    "join_eyebrow": "Join our team",
+    "join_title": "We have no open positions today — but we're open to great people",
+    "join_text1": "Although we're not currently recruiting for specific roles, we'd love to hear from people who could bring value to our team.",
+    "join_text2": "If you think your experience, approach and commitment fit MT-Projekt, send us your application.",
+    "join_text3": "We'll reach out to selected candidates once a suitable opportunity comes up.",
+    "join_cta": "Send application",
+    "spontaneous_title": "Send us your CV",
+    "spontaneous_text": "If you'd like to join MT-Projekt, leave us a few details about yourself. We'll gladly come back to your application when the right moment comes.",
+    "spontaneous_cta": "Send your CV"
+  },
+  "oferta_page": {
+    "home": "Home",
+    "back": "Careers",
+    "back_offers": "Job openings",
+    "all_offers_title": "Open positions",
+    "location": "Location",
+    "employment_type": "Employment type",
+    "apply_cta": "Apply for this position",
+    "no_offers": "We are not currently recruiting for specific roles. Check back soon or send us a speculative application."
+  },
+  "wspolpraca_page": {
+    "hero_eyebrow": "International Cooperation",
+    "hero_title": "Road design.",
+    "hero_title_accent": "Beyond borders.",
+    "hero_text": "We deliver comprehensive road infrastructure design, covering roads and streets as well as sanitary and telecommunications networks. We create functional, safe and cost-effective solutions tailored to the needs of investors and users.",
+    "hero_cta": "Discuss your project",
+    "partner_eyebrow": "International Design Partner",
+    "partner_title": "Your project.",
+    "partner_title2": "Our engineering expertise.",
+    "partner_text": "We provide comprehensive support at every stage of an investment — from concept through construction documentation to multidisciplinary coordination — tailored to the project's requirements and delivery process.",
+    "partner_feature1": "Flexible cooperation",
+    "partner_feature2": "On-time delivery",
+    "partner_feature3": "Alignment with client standards",
+    "expertise_eyebrow": "Our Expertise",
+    "expertise_title": "Road infrastructure is what we know best.",
+    "expertise1_title": "Road & Street Design",
+    "expertise1_text": "Functional and safe road solutions tailored to context.",
+    "expertise2_title": "Traffic & Road Safety",
+    "expertise2_text": "Traffic engineering and safety analysis for better outcomes.",
+    "expertise3_title": "CAD / BIM Documentation",
+    "expertise3_text": "Accurate 2D/3D documentation and coordinated digital models.",
+    "expertise4_title": "Design Coordination",
+    "expertise4_text": "Technical coordination and multidisciplinary approach.",
+    "cta_title": "Looking for a road design partner?",
+    "cta_text": "Tell us about your project, its location and the scope of support you need. We'll define the right cooperation model for your team.",
+    "cta_btn": "Start a conversation"
+  }
+}

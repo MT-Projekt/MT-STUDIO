@@ -1,0 +1,204 @@
+/* ===== LISTA OFERT ===== */
+.page {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 140px 2rem 5rem;
+}
+.breadcrumbs {
+  font-size: 0.85rem;
+  color: #6b6b6b;
+  margin-bottom: 1.5rem;
+}
+.breadcrumbs a {
+  color: #6b6b6b;
+  text-decoration: none;
+}
+.breadcrumbs a:hover {
+  color: var(--accent);
+}
+.breadcrumbCurrent {
+  color: var(--fg);
+}
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--fg);
+  margin-bottom: 3rem;
+}
+.jobsList {
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.jobRow {
+  display: grid;
+  grid-template-columns: auto 260px 1fr auto;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.75rem 2rem;
+  border-bottom: 1px solid #e5e5e5;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s;
+}
+.jobRow:last-child {
+  border-bottom: none;
+}
+.jobRow:hover {
+  background: #fafafa;
+}
+.jobIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f0f5f1;
+  color: var(--accent);
+  padding: 12px;
+  flex-shrink: 0;
+}
+.jobInfo {
+  min-width: 0;
+}
+.jobTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: 0.3rem;
+}
+.jobMeta {
+  font-size: 0.85rem;
+  color: #6b6b6b;
+}
+.jobSummary {
+  font-size: 0.9rem;
+  color: #6b6b6b;
+  line-height: 1.5;
+}
+.jobArrow {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  color: #6b6b6b;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 120px 1.25rem 3.5rem;
+  }
+  .jobRow {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "icon title arrow"
+      "summary summary summary";
+    row-gap: 0.5rem;
+    padding: 1.25rem 1.25rem;
+  }
+  .jobIcon {
+    grid-area: icon;
+  }
+  .jobInfo {
+    grid-area: title;
+  }
+  .jobArrow {
+    grid-area: arrow;
+  }
+  .jobSummary {
+    grid-area: summary;
+  }
+}
+
+/* ===== SZCZEGÓŁY OFERTY ===== */
+.detailPage {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 140px 2rem 5rem;
+}
+.detailHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+.detailIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #f0f5f1;
+  color: var(--accent);
+  padding: 14px;
+  flex-shrink: 0;
+}
+.detailTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--fg);
+  margin-bottom: 0.75rem;
+}
+.detailMetaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.detailMetaItem {
+  display: flex;
+  flex-direction: column;
+}
+.detailMetaLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9a9a9a;
+  margin-bottom: 0.2rem;
+}
+.detailMetaValue {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+.detailDescription {
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  line-height: 1.8;
+  white-space: pre-line;
+  margin-bottom: 3rem;
+}
+.detailCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.9rem 1.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.detailCta:hover {
+  background: var(--accent-light);
+}
+
+@media (max-width: 768px) {
+  .detailPage {
+    padding: 120px 1.25rem 3.5rem;
+  }
+  .detailHeader {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,37 @@
+.page {
+  padding-top: 80px;
+}
+
+/* Uniform grid — images only, no text */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.gridItem {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding-top: 72px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "nav": {
+    "strona_glowna": "Strona główna",
+    "o_nas": "O nas",
+    "projekty": "Projekty",
+    "wspolpraca": "Współpraca",
+    "wspolpraca_krajowa": "Współpraca krajowa",
+    "wspolpraca_miedzynarodowa": "International Cooperation",
+    "zespol": "Zespół",
+    "kontakt": "Kontakt",
+    "kariera": "Kariera",
+    "zapytanie": "Zapytanie ofertowe"
+  },
+  "hero": {
+    "label": "Biuro projektowe — infrastruktura drogowa",
+    "title": "Tworzymy infrastrukturę, która łączy ludzi",
+    "sub": "Kompleksowe projekty inżynierskie dróg, mostów i infrastruktury towarzyszącej.",
+    "btn": "Zobacz projekty",
+    "btn2": "Skontaktuj się z nami",
+    "scroll": "Przewiń"
+  },
+  "about_short": {
+    "eyebrow": "O nas",
+    "text": "Inżynieria infrastruktury drogowej z naciskiem na spójność techniczną i realia wykonawcze. Wspieramy inwestycje na każdym etapie.",
+    "stat1_num": "15+",
+    "stat1_label": "Lat doświadczenia",
+    "stat2_num": "200+",
+    "stat2_label": "Zrealizowanych projektów",
+    "stat3_num": "10",
+    "stat3_label": "Obszarów specjalizacji",
+    "cta": "Dowiedz się więcej o nas"
+  },
+  "competences": {
+    "eyebrow": "Kompetencje",
+    "title": "Cztery filary naszej pracy projektowej.",
+    "item1_title": "Drogi i ulice",
+    "item1_text": "Drogi, skrzyżowania, zjazdy, chodniki i trasy rowerowe.",
+    "item2_title": "Obiekty inżynierskie",
+    "item2_text": "Mosty, przepusty i konstrukcje drogowe.",
+    "item3_title": "Odwodnienie i sieci",
+    "item3_text": "Kanalizacja deszczowa, rowy, wyloty i retencja.",
+    "item4_title": "Organizacja ruchu",
+    "item4_text": "Stała i czasowa organizacja ruchu oraz oznakowanie."
+  },
+  "process": {
+    "eyebrow": "Jak pracujemy",
+    "title": "Przejrzysty proces od analizy po wsparcie realizacji.",
+    "step1_num": "01",
+    "step1_title": "Analiza",
+    "step1_text": "Rozpoznajemy zakres inwestycji, uwarunkowania terenowe, formalne i techniczne.",
+    "step2_num": "02",
+    "step2_title": "Projektowanie",
+    "step2_text": "Opracowujemy rozwiązania zgodne z wymaganiami inwestora i realiami wykonawczymi.",
+    "step3_num": "03",
+    "step3_title": "Koordynacja",
+    "step3_text": "Uzgadniamy dokumentację z branżami, gestorami sieci i zarządcami dróg.",
+    "step4_num": "04",
+    "step4_title": "Wsparcie",
+    "step4_text": "Pomagamy przy uzgodnieniach, zmianach i etapie realizacji inwestycji."
+  },
+  "projects": {
+    "eyebrow": "Realizacje",
+    "section_title": "Projekty",
+    "see_all": "Zobacz wszystkie →"
+  },
+  "team": {
+    "eyebrow": "Zespół",
+    "title": "Projektanci i specjaliści branżowi odpowiedzialni za jakość dokumentacji."
+  },
+  "cooperation": {
+    "eyebrow": "Współpraca",
+    "title": "Współpraca międzynarodowa.",
+    "en_col1_title": "Who we support",
+    "en_col1_items": [
+      "International engineering offices",
+      "Infrastructure contractors",
+      "Investors and developers",
+      "General designers"
+    ],
+    "en_col2_title": "Scope of support",
+    "en_col2_items": [
+      "Road design & traffic layouts",
+      "Bridge engineering & structures",
+      "CAD/BIM documentation",
+      "Technical coordination"
+    ]
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Przygotujemy zakres wsparcia dopasowany do Twojej inwestycji.",
+    "form_cta": "Formularz zapytania",
+    "name": "Imię i nazwisko",
+    "name_placeholder": "Jan Kowalski",
+    "email": "E-mail",
+    "email_placeholder": "jan@example.pl",
+    "message": "Wiadomość",
+    "message_placeholder": "Opisz krótko swój projekt lub zapytanie…",
+    "submit": "Wyślij wiadomość",
+    "sending": "Wysyłanie…",
+    "success_title": "Dziękujemy za wiadomość.",
+    "success_sub": "Odezwiemy się wkrótce."
+  },
+  "footer": {
+    "tagline": "Kompleksowe projekty inżynierskie"
+  },
+  "project_page": {
+    "home": "Strona główna",
+    "back": "Projekty",
+    "badge": "Zrealizowany projekt",
+    "year": "Rok realizacji",
+    "location": "Lokalizacja",
+    "area": "Długość / Rozpiętość",
+    "tech_eyebrow": "Technologia",
+    "tech_title": "Chmura punktów",
+    "tech_pointcloud": "Chmura punktów",
+    "tech_terrain": "Model terenu 3D",
+    "tech_existing": "Analiza istniejącego stanu",
+    "gallery_title": "Galeria realizacji",
+    "contact_title": "Planujesz podobną inwestycję?",
+    "contact_text": "Skontaktuj się z nami — przygotujemy rozwiązania dopasowane do Twoich potrzeb.",
+    "contact_cta": "Zapytanie ofertowe",
+    "next": "Następny projekt"
+  },
+  "projects_page": {
+    "title": "Projekty",
+    "count_suffix": "realizacji"
+  },
+  "o_nas_page": {
+    "hero_eyebrow": "O nas",
+    "hero_title": "Biuro projektowe skoncentrowane na praktycznych rozwiązaniach i koordynacji branżowej",
+    "hero_sub": "Przygotowujemy dokumentacje technicznie spójne i dostosowane do realiów wykonawczych.",
+    "timeline_eyebrow": "Doświadczenie i rozwój",
+    "competences_eyebrow": "Kompetencje projektowe",
+    "competences_title": "Pełen zakres opracowań branżowych.",
+    "process_eyebrow": "Jak pracujemy",
+    "process_title": "Przejrzysty proces projektowy.",
+    "process_sub": "Działamy w uporządkowany sposób, krok po kroku prowadząc projekt od analizy potrzeb aż po wsparcie na etapie realizacji inwestycji.",
+    "process_footer": "Doświadczenie, odpowiedzialność i jakość na każdym etapie projektu.",
+    "cta_title": "Porozmawiajmy o Twoim projekcie",
+    "cta_sub": "Przygotujemy zakres wsparcia dopasowany do inwestycji, etapu dokumentacji i wymagań technicznych.",
+    "cta_btn": "Skontaktuj się z nami"
+  },
+  "kariera_page": {
+    "eyebrow": "Kariera",
+    "title": "Projektujemy przyszłość ",
+    "title_accent": "- razem.",
+    "text": "W MT-Projekt łączymy wiedzę, doświadczenie i nowoczesne technologie, aby tworzyć rozwiązania infrastrukturalne, które realnie wpływają na otoczenie.",
+    "cta": "Zobacz, jak pracujemy",
+    "why_eyebrow": "Co nas wyróżnia?",
+    "why_title": "Dlaczego warto pracować w MT-Projekt?",
+    "jobs_eyebrow": "Otwarte stanowiska",
+    "jobs_title": "Dołącz do naszego zespołu",
+    "jobs_see_all": "Zobacz wszystkie oferty",
+    "join_eyebrow": "Dołącz do naszego zespołu",
+    "join_title": "Nie mamy dziś otwartych rekrutacji — ale jesteśmy otwarci na dobre osoby",
+    "join_text1": "Choć obecnie nie prowadzimy rekrutacji na konkretne stanowiska, chętnie poznamy osoby, które mogą wnieść wartość do naszego zespołu.",
+    "join_text2": "Jeśli uważasz, że Twoje doświadczenie, podejście i zaangażowanie pasują do MT-Projekt, prześlij nam swoją aplikację.",
+    "join_text3": "Skontaktujemy się z wybranymi osobami, gdy pojawi się odpowiednia możliwość współpracy.",
+    "join_cta": "Prześlij aplikację",
+    "spontaneous_title": "Wyślij nam swoje CV",
+    "spontaneous_text": "Jeśli chcesz dołączyć do MT-Projekt, zostaw nam kilka informacji o sobie. Chętnie wrócimy do Twojej aplikacji, gdy pojawi się odpowiedni moment.",
+    "spontaneous_cta": "Wyślij swoje CV"
+  },
+  "oferta_page": {
+    "home": "Strona główna",
+    "back": "Kariera",
+    "back_offers": "Oferty pracy",
+    "all_offers_title": "Otwarte stanowiska",
+    "location": "Lokalizacja",
+    "employment_type": "Wymiar pracy",
+    "apply_cta": "Aplikuj na to stanowisko",
+    "no_offers": "Obecnie nie prowadzimy rekrutacji na konkretne stanowiska. Sprawdź ponownie wkrótce lub wyślij nam aplikację spontaniczną."
+  },
+  "wspolpraca_page": {
+    "hero_eyebrow": "Międzynarodowa współpraca",
+    "hero_title": "Projektujemy drogi.",
+    "hero_title_accent": "Bez granic.",
+    "hero_text": "Projektujemy kompleksową infrastrukturę drogową, obejmującą drogi i ulice, a także sieci sanitarne oraz teletechniczne. Tworzymy funkcjonalne, bezpieczne i ekonomiczne rozwiązania dostosowane do potrzeb inwestorów i użytkowników.",
+    "hero_cta": "Omów swój projekt",
+    "partner_eyebrow": "Partner w projektowaniu",
+    "partner_title": "Twój projekt.",
+    "partner_title2": "Nasza wiedza inżynierska.",
+    "partner_text": "Zapewniamy kompleksową obsługę na każdym etapie inwestycji – od koncepcji po dokumentację wykonawczą i koordynację międzybranżową – dostosowaną do wymagań projektu oraz procesu jego realizacji.",
+    "partner_feature1": "Elastyczna współpraca",
+    "partner_feature2": "Terminowa realizacja",
+    "partner_feature3": "Dopasowanie do standardów klienta",
+    "expertise_eyebrow": "Nasza specjalizacja",
+    "expertise_title": "Infrastruktura drogowa to nasza specjalność.",
+    "expertise1_title": "Projektowanie dróg i ulic",
+    "expertise1_text": "Funkcjonalne i bezpieczne rozwiązania dopasowane do kontekstu.",
+    "expertise2_title": "Bezpieczeństwo ruchu drogowego",
+    "expertise2_text": "Analizy ruchu i audyty bezpieczeństwa dla lepszych rezultatów.",
+    "expertise3_title": "Dokumentacja CAD / BIM",
+    "expertise3_text": "Dokumentacja 2D/3D oraz koordynacja modeli cyfrowych.",
+    "expertise4_title": "Koordynacja projektowa",
+    "expertise4_text": "Koordynacja techniczna oraz podejście wielobranżowe.",
+    "cta_title": "Szukasz partnera w projektowaniu dróg?",
+    "cta_text": "Powiedz nam o swoim projekcie, a my dopasujemy zakres współpracy do Twoich potrzeb. Wspólnie zrealizujemy model współpracy, który przyniesie najlepsze efekty.",
+    "cta_btn": "Rozpocznij rozmowę"
+  }
+}
