@@ -1,4 +1,35 @@
 {
+  "meta": {
+    "default_title": "MT-Projekt – road infrastructure design office",
+    "project_description_suffix": "Designed by MT-Projekt engineering office, Poland.",
+    "job_title_suffix": "job opening",
+    "pages": {
+      "home": {
+        "title": "MT-Projekt – Road & Bridge Design Office | Poland",
+        "description": "Engineering design office in Poland: roads and streets, bridges, drainage and traffic management. CAD/BIM documentation and support through construction."
+      },
+      "o_nas": {
+        "title": "About us – road infrastructure design office",
+        "description": "MT-Projekt: 15+ years of experience and 200+ road projects. Technically consistent documentation adapted to construction realities."
+      },
+      "projekty": {
+        "title": "Projects – road and bridge design portfolio",
+        "description": "Our portfolio: streets, roundabouts, district roads, viaducts and car parks in the Mazovia region, Poland. Designed by MT-Projekt."
+      },
+      "wspolpraca": {
+        "title": "International cooperation – road design partner",
+        "description": "We support engineering offices, contractors and investors in Poland and abroad: road design, road safety, CAD/BIM documentation (PL/EN) and coordination."
+      },
+      "kariera": {
+        "title": "Careers – engineering design jobs",
+        "description": "Work at MT-Projekt in Grójec, Poland: road, bridge and BIM design. Professional growth, modern tools and real impact on infrastructure."
+      },
+      "oferty": {
+        "title": "Job openings",
+        "description": "Current job openings at MT-Projekt, a road infrastructure design office in Grójec, Poland. See open positions and apply."
+      }
+    }
+  },
   "nav": {
     "strona_glowna": "Home",
     "o_nas": "About us",

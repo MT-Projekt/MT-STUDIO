@@ -74,18 +74,21 @@ import {
   getAllSlugs as mockGetAllSlugs,
 } from './mockData'
 
+// Mock data is a dev-only fallback — in production it would publish (and get indexed) fake projects
+const useMocks = process.env.NODE_ENV !== 'production'
+
 export async function getAllProjects(lang = 'pl'): Promise<Project[]> {
   const results = await client.fetch<Project[]>(
     `*[_type == "project"] | order(year desc) { ${projectFields(lang)} }`
   )
-  return results.length > 0 ? results : mockProjects as Project[]
+  return results.length > 0 || !useMocks ? results : mockProjects as Project[]
 }
 
 export async function getFeaturedProjects(lang = 'pl'): Promise<Project[]> {
   const results = await client.fetch<Project[]>(
     `*[_type == "project" && featured == true] | order(year desc) { ${projectFields(lang)} }`
   )
-  return results.length > 0 ? results : mockProjects.filter(p => p.featured) as Project[]
+  return results.length > 0 || !useMocks ? results : mockProjects.filter(p => p.featured) as Project[]
 }
 
 export async function getProjectBySlug(slug: string, lang = 'pl'): Promise<Project | null> {
@@ -93,7 +96,7 @@ export async function getProjectBySlug(slug: string, lang = 'pl'): Promise<Proje
     `*[_type == "project" && slug.current == $slug][0] { ${projectFields(lang)} }`,
     { slug }
   )
-  if (result) return result
+  if (result || !useMocks) return result
   return (mockProjects.find(p => p.slug === slug) as Project) ?? null
 }
 
@@ -101,14 +104,14 @@ export async function getAllSlugs(): Promise<string[]> {
   const results = await client.fetch<{ slug: string }[]>(
     `*[_type == "project"] { "slug": slug.current }`
   )
-  return results.length > 0 ? results.map(r => r.slug) : mockGetAllSlugs()
+  return results.length > 0 || !useMocks ? results.map(r => r.slug) : mockGetAllSlugs()
 }
 
 export async function getTeam(lang = 'pl'): Promise<TeamMember[]> {
   const results = await client.fetch<TeamMember[]>(
     `*[_type == "teamMember"] | order(order asc) { ${teamFields(lang)} }`
   )
-  return results.length > 0 ? results : mockTeam as TeamMember[]
+  return results.length > 0 || !useMocks ? results : mockTeam as TeamMember[]
 }
 
 export async function getJobPostings(lang = 'pl'): Promise<JobPosting[]> {
@@ -129,4 +132,13 @@ export async function getAllJobSlugs(): Promise<string[]> {
     `*[_type == "jobPosting" && active == true] { "slug": slug.current }`
   )
   return results.map(r => r.slug)
+}
+
+type SitemapDoc = { slug: string; updatedAt: string }
+
+export async function getSitemapDocs(): Promise<{ projects: SitemapDoc[]; jobs: SitemapDoc[] }> {
+  return client.fetch(`{
+    "projects": *[_type == "project" && defined(slug.current)] { "slug": slug.current, "updatedAt": _updatedAt },
+    "jobs": *[_type == "jobPosting" && active == true && defined(slug.current)] { "slug": slug.current, "updatedAt": _updatedAt }
+  }`)
 }

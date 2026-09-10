@@ -1,4 +1,35 @@
 {
+  "meta": {
+    "default_title": "MT-Projekt – biuro projektowe infrastruktury drogowej",
+    "project_description_suffix": "Projekt biura projektowego MT-Projekt z Grójca.",
+    "job_title_suffix": "oferta pracy",
+    "pages": {
+      "home": {
+        "title": "MT-Projekt – projektowanie dróg i mostów | Grójec",
+        "description": "Biuro projektowe z Grójca: projekty dróg i ulic, mostów, odwodnienia i organizacji ruchu. Dokumentacja CAD/BIM i wsparcie od analizy po realizację."
+      },
+      "o_nas": {
+        "title": "O nas – biuro projektowe infrastruktury drogowej",
+        "description": "Poznaj MT-Projekt: ponad 15 lat doświadczenia i 200+ projektów drogowych. Dokumentacja technicznie spójna i dopasowana do realiów wykonawczych."
+      },
+      "projekty": {
+        "title": "Projekty – realizacje drogowe i mostowe",
+        "description": "Nasze realizacje: ulice, ronda, drogi powiatowe, wiadukty i parkingi na Mazowszu. Portfolio biura projektowego MT-Projekt z Grójca."
+      },
+      "wspolpraca": {
+        "title": "Współpraca międzynarodowa – projektowanie dróg",
+        "description": "Wspieramy biura inżynierskie, wykonawców i inwestorów z Polski i zagranicy: projektowanie dróg, BRD, dokumentacja CAD/BIM (PL/EN) i koordynacja."
+      },
+      "kariera": {
+        "title": "Kariera – praca w biurze projektowym",
+        "description": "Praca w MT-Projekt w Grójcu: projektowanie dróg, mostów i BIM. Rozwój, nowoczesne narzędzia i realny wpływ na infrastrukturę."
+      },
+      "oferty": {
+        "title": "Oferty pracy",
+        "description": "Aktualne oferty pracy w MT-Projekt – biurze projektowym infrastruktury drogowej w Grójcu. Sprawdź otwarte stanowiska i aplikuj."
+      }
+    }
+  },
   "nav": {
     "strona_glowna": "Strona główna",
     "o_nas": "O nas",

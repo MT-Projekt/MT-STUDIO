@@ -3,10 +3,10 @@ import '../globals.css'
 import Navbar from '@/components/Navbar/Navbar'
 import Footer from '@/components/Footer/Footer'
 import { getDictionary } from '@/lib/dictionaries'
+import { rootMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'MT Projekt',
-  description: 'Architecture studio — architecture and interiors',
+export async function generateMetadata(): Promise<Metadata> {
+  return rootMetadata('en')
 }
 
 export default async function EnLayout({ children }: { children: React.ReactNode }) {
