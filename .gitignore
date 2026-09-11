@@ -44,3 +44,10 @@ next-env.d.ts
 
 AGENTS.md
 CLAUDE.md
+
+# sekrety - konfiguracja wysylki maili (nigdy nie wysylac na GitHub)
+.env
+EMAIL_SETUP.md
+email_setup.md
+DEPLOYMENT.md
+deployment.md
