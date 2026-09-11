@@ -15,12 +15,12 @@ interface Item {
 
 // UWAGA: dokument oparty na wzorcu przygotowanym przez kancelarie prawna,
 // zaadaptowanym do dzialalnosci MT-Projekt Sp. z o.o.
-// Fragmenty oznaczone [DO UZUPELNIENIA] wymagaja danych, ktorych nie wolno zgadywac.
+// Dane rejestrowe zweryfikowane z odpisem KRS 0000764092 (api-krs.ms.gov.pl) w dniu 2026-09-11.
 // Calosc powinna zostac zweryfikowana przez prawnika przed publikacja.
 const items: Item[] = [
   {
-    text: 'Administratorem danych osobowych zawartych w Serwisie jest MT-Projekt Sp. z o.o. z siedzibą w Grójcu przy ul. Piłsudskiego 42A, 05-600 Grójec, wpisana do rejestru przedsiębiorców Krajowego Rejestru Sądowego prowadzonego przez [DO UZUPEŁNIENIA: oznaczenie sądu rejestrowego] pod numerem KRS [DO UZUPEŁNIENIA], NIP [DO UZUPEŁNIENIA], REGON [DO UZUPEŁNIENIA].',
-    text_en: 'The controller of personal data contained in the Website is MT-Projekt Sp. z o.o., with its registered office in Grójec at ul. Piłsudskiego 42A, 05-600 Grójec, Poland, entered into the register of entrepreneurs of the National Court Register kept by [TO BE COMPLETED: registry court] under KRS number [TO BE COMPLETED], tax identification number (NIP) [TO BE COMPLETED], statistical number (REGON) [TO BE COMPLETED].',
+    text: 'Administratorem danych osobowych zawartych w Serwisie jest MT-PROJEKT Spółka z ograniczoną odpowiedzialnością z siedzibą w Grójcu, ul. Józefa Piłsudskiego 42A, 05-600 Grójec, wpisana do rejestru przedsiębiorców Krajowego Rejestru Sądowego pod numerem KRS 0000764092, NIP 7972068087, REGON 382132889.',
+    text_en: 'The controller of personal data contained in the Website is MT-PROJEKT Spółka z ograniczoną odpowiedzialnością (a limited liability company) with its registered office in Grójec, ul. Józefa Piłsudskiego 42A, 05-600 Grójec, Poland, entered into the register of entrepreneurs of the National Court Register under KRS number 0000764092, tax identification number (NIP) 7972068087, statistical number (REGON) 382132889.',
   },
   {
     text: 'W trosce o bezpieczeństwo powierzonych nam danych opracowaliśmy wewnętrzne procedury i zalecenia, które mają zapobiec udostępnieniu danych osobom nieupoważnionym. Kontrolujemy ich wykonywanie i stale sprawdzamy ich zgodność z odpowiednimi aktami prawnymi – ustawą o ochronie danych osobowych, ustawą o świadczeniu usług drogą elektroniczną, a także wszelkiego rodzaju aktami wykonawczymi i aktami prawa wspólnotowego.',
@@ -40,7 +40,7 @@ const items: Item[] = [
       },
       {
         text: 'przeprowadzenie procesu rekrutacji na stanowiska oferowane przez Administratora, w tym rozpatrzenie dokumentów aplikacyjnych przesłanych z inicjatywy kandydata (art. 6 ust. 1 lit. a i lit. b RODO oraz art. 22(1) Kodeksu pracy);',
-        text_en: 'conducting recruitment processes for positions offered by the Controller, including the review of application documents submitted at the candidate own initiative (Art. 6(1)(a) and (b) GDPR and Art. 22(1) of the Polish Labour Code);',
+        text_en: 'conducting recruitment processes for positions offered by the Controller, including the review of application documents submitted on the candidate’s own initiative (Art. 6(1)(a) and (b) GDPR and Art. 22(1) of the Polish Labour Code);',
       },
       {
         text: 'konieczność wypełnienia wymagań podatkowych i rachunkowych, w tym przechowywanie faktur oraz innych dokumentów księgowych (ustawa z dnia 29 września 1994 roku o rachunkowości oraz art. 6 ust. 1 lit. c RODO);',
@@ -66,11 +66,11 @@ const items: Item[] = [
       },
       {
         text: 'poprzez dobrowolnie przesłane dane osobowe zawarte w korespondencji kierowanej na adresy poczty elektronicznej Administratora, w tym w dokumentach aplikacyjnych przesyłanych w związku z ofertami pracy;',
-        text_en: 'through personal data voluntarily provided in correspondence sent to the Controller e-mail addresses, including application documents submitted in connection with job offers;',
+        text_en: 'through personal data voluntarily provided in correspondence sent to the Controller’s e-mail addresses, including application documents submitted in connection with job offers;',
       },
       {
         text: 'poprzez informacje zapisywane w pamięci lokalnej przeglądarki Użytkownika, w zakresie niezbędnym do prawidłowego wyświetlania Serwisu.',
-        text_en: 'through information stored in the local storage of the User browser, to the extent necessary for the correct display of the Website.',
+        text_en: 'through information stored in the local storage of the User’s browser, to the extent necessary for the correct display of the Website.',
       },
     ],
   },
@@ -91,8 +91,8 @@ const items: Item[] = [
     text_en: 'Data subjects have the right to lodge a complaint with the President of the Personal Data Protection Office, ul. Stawki 2, 00-193 Warsaw, Poland.',
   },
   {
-    text: 'Dane osobowe będą przechowywane odpowiednio: w celu udzielenia odpowiedzi na zapytanie przesłane za pośrednictwem formularza kontaktowego lub poczty elektronicznej – przez okres [DO UZUPEŁNIENIA: np. 12 miesięcy] od zakończenia korespondencji; w celu przeprowadzenia procesu rekrutacji – do czasu jego zakończenia, a w przypadku wyrażenia odrębnej zgody na udział w przyszłych rekrutacjach – przez okres [DO UZUPEŁNIENIA: np. 12 miesięcy]; w celu przechowywania dokumentacji księgowej – przez okres 5 lat od końca roku kalendarzowego, w którym powstał obowiązek podatkowy; w celu dochodzenia roszczeń pomiędzy stronami – przez okres przedawnienia roszczeń.',
-    text_en: 'Personal data will be retained as follows: for the purpose of responding to an enquiry sent via the contact form or by e-mail – for a period of [TO BE COMPLETED: e.g. 12 months] from the end of the correspondence; for the purpose of conducting a recruitment process – until its completion and, where separate consent to participate in future recruitment processes has been given, for a period of [TO BE COMPLETED: e.g. 12 months]; for the purpose of retaining accounting records – for a period of 5 years from the end of the calendar year in which the tax obligation arose; for the purpose of pursuing claims between the parties – for the limitation period applicable to such claims.',
+    text: 'Dane osobowe będą przechowywane odpowiednio: w celu udzielenia odpowiedzi na zapytanie przesłane za pośrednictwem formularza kontaktowego lub poczty elektronicznej – przez okres 12 miesięcy od zakończenia korespondencji; w celu przeprowadzenia procesu rekrutacji – do czasu jego zakończenia, a w przypadku wyrażenia odrębnej zgody na udział w przyszłych rekrutacjach – przez okres 12 miesięcy od zakończenia rekrutacji, nie dłużej jednak niż do chwili cofnięcia zgody; w celu przechowywania dokumentacji księgowej – przez okres 5 lat od końca roku kalendarzowego, w którym powstał obowiązek podatkowy; w celu dochodzenia roszczeń pomiędzy stronami – przez okres przedawnienia roszczeń.',
+    text_en: 'Personal data will be retained as follows: for the purpose of responding to an enquiry sent via the contact form or by e-mail – for a period of 12 months from the end of the correspondence; for the purpose of conducting a recruitment process – until its completion and, where separate consent to participate in future recruitment processes has been given, for a period of 12 months from the end of the recruitment process, but no longer than until the consent is withdrawn; for the purpose of retaining accounting records – for a period of 5 years from the end of the calendar year in which the tax obligation arose; for the purpose of pursuing claims between the parties – for the limitation period applicable to such claims.',
   },
   {
     text: 'Dane udostępnione przez Klientów będą podlegały udostępnieniu następującym podmiotom trzecim:',
@@ -100,7 +100,7 @@ const items: Item[] = [
     sub: [
       {
         text: 'podmiotom obsługującym i utrzymującym system informatyczny Administratora, w szczególności dostawcy usług hostingowych Serwisu oraz dostawcy systemu zarządzania treścią Serwisu;',
-        text_en: 'entities operating and maintaining the Controller IT systems, in particular the Website hosting provider and the provider of the Website content management system;',
+        text_en: 'entities operating and maintaining the Controller’s IT systems, in particular the Website hosting provider and the provider of the Website content management system;',
       },
       {
         text: 'dostawcy usług poczty elektronicznej, za pośrednictwem którego Administrator prowadzi korespondencję;',
@@ -129,24 +129,24 @@ const items: Item[] = [
     text_en: 'Data provided by the Client will not be subject to profiling or automated decision-making.',
   },
   {
-    text: 'Korzystanie przez Administratora z usług dostawców infrastruktury informatycznej może wiązać się z przekazywaniem danych osobowych do państwa trzeciego, w szczególności na terytorium Stanów Zjednoczonych. Przekazanie następuje wyłącznie na podstawie mechanizmów przewidzianych w rozdziale V RODO, tj. decyzji Komisji Europejskiej stwierdzającej odpowiedni stopień ochrony albo standardowych klauzul umownych. [DO UZUPEŁNIENIA: potwierdzić u dostawcy hostingu oraz dostawcy systemu zarządzania treścią podstawę prawną transferu i wskazać ją w tym miejscu. Jeżeli Serwis zostanie przeniesiony na infrastrukturę zlokalizowaną wyłącznie w Europejskim Obszarze Gospodarczym, niniejszy punkt należy zastąpić oświadczeniem o braku zamiaru przekazywania danych do państwa trzeciego lub organizacji międzynarodowej.]',
-    text_en: 'The Controller use of IT infrastructure providers may involve the transfer of personal data to a third country, in particular to the territory of the United States. Any such transfer takes place solely on the basis of the mechanisms provided for in Chapter V of the GDPR, i.e. an adequacy decision of the European Commission or Standard Contractual Clauses. [TO BE COMPLETED: confirm with the hosting provider and the content management system provider the legal basis for the transfer and state it here. If the Website is migrated to infrastructure located solely within the European Economic Area, this point should be replaced with a statement that there is no intention to transfer data to a third country or international organisation.]',
+    text: 'Korzystanie przez Administratora z usług dostawców infrastruktury informatycznej, w szczególności dostawcy usług hostingowych Serwisu, może wiązać się z przekazywaniem danych osobowych do państwa trzeciego, w szczególności na terytorium Stanów Zjednoczonych. W takim przypadku przekazanie następuje wyłącznie na podstawie mechanizmów przewidzianych w rozdziale V RODO, tj. decyzji Komisji Europejskiej stwierdzającej odpowiedni stopień ochrony, w tym w ramach programu EU-US Data Privacy Framework, albo standardowych klauzul umownych przyjętych przez Komisję Europejską.',
+    text_en: 'The Controller’s use of IT infrastructure providers, in particular the Website hosting provider, may involve the transfer of personal data to a third country, in particular to the territory of the United States. In such a case, the transfer takes place solely on the basis of the mechanisms provided for in Chapter V of the GDPR, i.e. an adequacy decision of the European Commission, including under the EU-US Data Privacy Framework, or Standard Contractual Clauses adopted by the European Commission.',
   },
   {
     text: 'Ponadto, pod warunkiem uzyskania zgody Klienta w tym zakresie, jego dane osobowe będą mogły być wykorzystywane, z zachowaniem wszelkich jego praw, do celów informowania Klienta za pośrednictwem poczty elektronicznej lub telefonicznie o usługach świadczonych przez MT-Projekt Sp. z o.o. oraz o jej ofertach.',
-    text_en: 'Furthermore, subject to obtaining the Client consent in this respect, their personal data may be used, with all their rights preserved, for the purpose of informing the Client by e-mail or by telephone about the services provided by MT-Projekt Sp. z o.o. and about its offers.',
+    text_en: 'Furthermore, subject to obtaining the Client’s consent in this respect, their personal data may be used, with all their rights preserved, for the purpose of informing the Client by e-mail or by telephone about the services provided by MT-Projekt Sp. z o.o. and about its offers.',
   },
   {
     text: 'W związku z prawem do wglądu, zmiany oraz usunięcia danych osobowych, a także możliwością sprzeciwienia się ich przetwarzaniu, prawo to Klient może zrealizować w każdym czasie, kontaktując się:',
     text_en: 'In connection with the right to access, rectify and erase personal data, as well as the possibility to object to its processing, the Client may exercise these rights at any time by contacting us:',
     sub: [
       {
-        text: 'listownie, na adres: MT-Projekt Sp. z o.o., ul. Piłsudskiego 42A, 05-600 Grójec;',
-        text_en: 'by post, to the address: MT-Projekt Sp. z o.o., ul. Piłsudskiego 42A, 05-600 Grójec, Poland;',
+        text: 'listownie, na adres: MT-PROJEKT Sp. z o.o., ul. Józefa Piłsudskiego 42A, 05-600 Grójec;',
+        text_en: 'by post, to the address: MT-PROJEKT Sp. z o.o., ul. Józefa Piłsudskiego 42A, 05-600 Grójec, Poland;',
       },
       {
-        text: 'telefonicznie od godziny [DO UZUPEŁNIENIA] do [DO UZUPEŁNIENIA] od poniedziałku do piątku, pod numerem telefonu +48 732 707 800;',
-        text_en: 'by telephone from [TO BE COMPLETED] to [TO BE COMPLETED], Monday to Friday, on +48 732 707 800;',
+        text: 'telefonicznie, w dni robocze w godzinach 8:00–16:00, pod numerem telefonu +48 732 707 800;',
+        text_en: 'by telephone on working days between 8:00 and 16:00 (Polish time), on +48 732 707 800;',
       },
       {
         text: 'pisząc na adres e-mail: biuro@mt-p.pl;',
@@ -168,7 +168,7 @@ const items: Item[] = [
   },
   {
     text: 'Serwis nie wykorzystuje plików cookies w celach analitycznych, marketingowych ani w celu śledzenia aktywności Użytkowników. Administrator nie korzysta z narzędzi analitycznych ani z pikseli śledzących serwisów społecznościowych. W pamięci lokalnej przeglądarki Użytkownika zapisywana jest wyłącznie informacja o zamknięciu komunikatu o prywatności, w celu uniknięcia jego ponownego wyświetlania przy kolejnych odwiedzinach; informacja ta nie jest przekazywana Administratorowi i pozostaje wyłącznie na urządzeniu Użytkownika. Użytkownik może w każdej chwili usunąć te dane w ustawieniach swojej przeglądarki. W przypadku wdrożenia w przyszłości narzędzi analitycznych lub marketingowych niniejsza Polityka zostanie zaktualizowana, a ich uruchomienie zostanie poprzedzone uzyskaniem zgody Użytkownika.',
-    text_en: 'The Website does not use cookies for analytical or marketing purposes, nor to track User activity. The Controller does not use analytics tools or social media tracking pixels. Only information about the dismissal of the privacy notice is stored in the local storage of the User browser, in order to avoid displaying it again on subsequent visits; this information is not transmitted to the Controller and remains solely on the User device. The User may delete this data at any time in their browser settings. Should analytical or marketing tools be implemented in the future, this Policy will be updated and their activation will be preceded by obtaining the User consent.',
+    text_en: 'The Website does not use cookies for analytical or marketing purposes, nor to track User activity. The Controller does not use analytics tools or social media tracking pixels. Only information about the dismissal of the privacy notice is stored in the local storage of the User’s browser, in order to avoid displaying it again on subsequent visits; this information is not transmitted to the Controller and remains solely on the User’s device. The User may delete this data at any time in their browser settings. Should analytical or marketing tools be implemented in the future, this Policy will be updated and their activation will be preceded by obtaining the User’s consent.',
   },
   {
     text: 'Wszelkie pytania związane z przetwarzaniem przez nas danych osobowych można kierować w sposób określony w pkt 14 niniejszej Polityki Prywatności.',
