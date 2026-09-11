@@ -6,6 +6,7 @@ import CookieBanner from '@/components/CookieBanner/CookieBanner'
 import { getDictionary } from '@/lib/dictionaries'
 import { rootMetadata, siteJsonLd } from '@/lib/seo'
 import JsonLd from '@/components/JsonLd'
+import { spaceGrotesk } from '@/lib/fonts'
 
 export async function generateMetadata(): Promise<Metadata> {
   return rootMetadata('pl')
@@ -14,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function PlLayout({ children }: { children: React.ReactNode }) {
   const dict = await getDictionary('pl')
   return (
-    <html lang="pl">
+    <html lang="pl" className={spaceGrotesk.variable}>
       <body>
         <JsonLd data={await siteJsonLd('pl')} />
         <Navbar lang="pl" dict={dict.nav} />

@@ -5,6 +5,7 @@ import Footer from '@/components/Footer/Footer'
 import CookieBanner from '@/components/CookieBanner/CookieBanner'
 import NotFoundPage from '@/components/pages/NotFoundPage'
 import { getDictionary } from '@/lib/dictionaries'
+import { spaceGrotesk } from '@/lib/fonts'
 
 // Unmatched URLs (e.g. /abc) — outside both root layouts, so this page brings its own <html>
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 export default async function GlobalNotFound() {
   const dict = await getDictionary('pl')
   return (
-    <html lang="pl">
+    <html lang="pl" className={spaceGrotesk.variable}>
       <body>
         <Navbar lang="pl" dict={dict.nav} />
         <main>
