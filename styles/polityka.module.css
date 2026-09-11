@@ -54,53 +54,98 @@
   max-width: 65ch;
 }
 
-.content {
+.list {
+  list-style: none;
+  counter-reset: punkt;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1.5rem;
 }
 
-.section {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
+.item {
+  counter-increment: punkt;
+  position: relative;
+  padding-left: 2.75rem;
 }
 
-.sectionTitle {
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
+.item::before {
+  content: counter(punkt) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2rem;
+  text-align: right;
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--fg);
-  margin-bottom: 0.25rem;
-}
-
-.sectionNum {
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  color: var(--accent);
-  flex-shrink: 0;
-}
-
-.paragraph {
-  font-size: 0.95rem;
   line-height: 1.8;
-  color: #4a4a4a;
-  max-width: 70ch;
+  color: var(--accent);
+}
+
+.itemText {
+  display: block;
+  font-size: 0.925rem;
+  line-height: 1.8;
+  color: #3f3f3d;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.subList {
+  list-style: none;
+  counter-reset: podpunkt;
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.subItem {
+  counter-increment: podpunkt;
+  position: relative;
+  padding-left: 2.25rem;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: #555551;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.subItem::before {
+  content: counter(podpunkt) ")";
+  position: absolute;
+  left: 0;
+  width: 1.6rem;
+  text-align: right;
+  color: var(--muted);
+}
+
+.binding {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--surface-mid);
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--muted);
 }
 
 @media (max-width: 768px) {
   .page {
     padding: 110px 1.25rem 4rem;
   }
-  .content {
-    gap: 2.25rem;
+  .list {
+    gap: 1.25rem;
   }
-  .sectionTitle {
-    font-size: 1.05rem;
+  .item {
+    padding-left: 1.9rem;
+  }
+  .item::before {
+    width: 1.4rem;
+  }
+  .subItem {
+    padding-left: 1.6rem;
+  }
+  .itemText, .subItem {
+    text-align: left;
   }
 }

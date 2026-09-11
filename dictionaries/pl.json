@@ -155,9 +155,10 @@
   },
   "privacy_page": {
     "home": "Strona główna",
-    "eyebrow": "Dane osobowe",
+    "eyebrow": "Informacje ogólne",
     "title": "Polityka prywatności",
-    "intro": "Poniżej wyjaśniamy, jakie dane osobowe zbieramy za pośrednictwem tej strony, w jakim celu je przetwarzamy oraz jakie prawa Ci przysługują."
+    "intro": "Niniejsza Polityka Prywatności określa zasady przetwarzania i ochrony danych osobowych przekazanych przez Użytkowników/Klientów w związku z korzystaniem przez nich z usług oferowanych przez MT-Projekt Sp. z o.o. poprzez Serwis.",
+    "binding": "W przypadku rozbieżności między wersją polską a angielską wiążąca jest wersja polska."
   },
   "project_page": {
     "home": "Strona główna",

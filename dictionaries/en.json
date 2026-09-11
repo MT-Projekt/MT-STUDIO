@@ -155,9 +155,10 @@
   },
   "privacy_page": {
     "home": "Home",
-    "eyebrow": "Personal data",
+    "eyebrow": "General information",
     "title": "Privacy policy",
-    "intro": "Below we explain what personal data we collect through this website, why we process it and what rights you have."
+    "intro": "This Privacy Policy sets out the rules for the processing and protection of personal data provided by Users/Clients in connection with their use of the services offered by MT-Projekt Sp. z o.o. through the Website.",
+    "binding": "This is a translation of the Polish original. In the event of any discrepancy between the Polish and English versions, the Polish version shall prevail."
   },
   "project_page": {
     "home": "Home",
