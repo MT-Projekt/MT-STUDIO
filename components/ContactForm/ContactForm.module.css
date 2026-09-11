@@ -110,6 +110,26 @@
   margin-top: -14px;
 }
 
+.turnstile {
+  min-height: 65px;
+}
+
+.formError {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #e88;
+  margin-top: -8px;
+}
+
+/* pulapka na boty - niewidoczna dla ludzi i czytnikow ekranu */
+.hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .success {
   display: flex;
   flex-direction: column;

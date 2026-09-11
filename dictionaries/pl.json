@@ -142,7 +142,10 @@
     "success_sub": "Odezwiemy się wkrótce.",
     "consent": "Wyrażam zgodę na przetwarzanie moich danych osobowych przez MT-Projekt Sp. z o.o. w celu udzielenia odpowiedzi na moje zapytanie.",
     "consent_link": "Polityka prywatności",
-    "consent_error": "Zaznacz zgodę na przetwarzanie danych, aby wysłać wiadomość."
+    "consent_error": "Zaznacz zgodę na przetwarzanie danych, aby wysłać wiadomość.",
+    "error_captcha": "Potwierdź, że nie jesteś robotem, i spróbuj ponownie.",
+    "error_validation": "Uzupełnij poprawnie wszystkie pola formularza.",
+    "error_generic": "Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz bezpośrednio na biuro@mt-p.pl."
   },
   "footer": {
     "tagline": "Kompleksowe projekty inżynierskie",
